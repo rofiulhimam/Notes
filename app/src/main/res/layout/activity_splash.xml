@@ -1,0 +1,83 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/splash_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:transitionName="layout"
+    tools:context=".Splash">
+
+    <FrameLayout
+        android:id="@+id/framesplash"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:animateLayoutChanges="true"
+        app:layout_constraintTop_toBottomOf="@+id/guideline2">
+
+        <ImageView
+            android:id="@+id/splash_bg"
+            android:layout_width="250dp"
+            android:layout_height="280dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_splash_bg" />
+
+        <ImageView
+            android:id="@+id/tcklogo1"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_gravity="center"
+            android:transitionName="sendLogo"
+            android:src="@drawable/splash" />
+
+        <ImageView
+            android:id="@+id/tcklogo2"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_gravity="center"
+            android:transitionName="sendLogo"
+            android:src="@drawable/splashselect"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressTintMode="src_in"
+        android:indeterminateTint="#0F00FF"
+        app:layout_constraintBottom_toTopOf="@id/guideline3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="32dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.13953489" />
+
+    <TextView
+        android:id="@+id/twkSupport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:gravity="center"
+        android:text="Notes"
+        android:textColor="#0F00FF"
+        android:textSize="36sp"
+        android:transitionName="sendTitle"
+        app:layout_constraintLeft_toLeftOf="@+id/framesplash"
+        app:layout_constraintRight_toRightOf="@id/framesplash"
+        app:layout_constraintTop_toBottomOf="@+id/guideline3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
